@@ -236,3 +236,19 @@ button:hover {
         font-size: 15px;
     }
 }
+
+/* =========================
+    REGISTRATION EMAIL VALIDATION MESSAGE
+========================= */
+#email-error {
+    font-size: 13px;
+    margin-top: 4px;
+}
+
+#email-error.error {
+    color: #d93025;
+}
+
+#email-error.success {
+    color: #188038;
+}

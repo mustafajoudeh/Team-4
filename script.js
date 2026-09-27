@@ -25,6 +25,45 @@ let users = [
     }
 ];
 
+// HTML -Email- Elements 
+const form = document.getElementById("register-form");
+const emailInput = document.getElementById("email");
+const message = document.getElementById("email-message");
+
+form.addEventListener("submit" , function(e){
+    e.preventDefault();
+
+    const email = emailInput.value.trim();;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Empty Email
+    if(email === ""){
+        showMessage("Please enter your email", "error");
+        return;
+    }
+
+    // Not Valid Email
+    if(!emailPattern.test(email)){
+        showMessage("Please enter a valid email address", "error");
+        return;
+    }
+
+    // Valid Email
+    showMessage("Email is valid!", "success");
+});
+
+// Validation Message Function
+function showMessage(text , type){
+    message.textContent = text;
+    message.className = type;
+
+    if(type === "error"){
+        emailInput.classList.add("input-error");
+    }
+    else {
+        emailInput.classList.remove("input-error");
+    }
+}
 // Get form elements from HTML
 const registerForm = document.getElementById("register-form");
 const passwordInput = document.getElementById("password");
