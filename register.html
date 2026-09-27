@@ -16,7 +16,7 @@
         <h1>Create Account</h1>
         <p class="subtitle">Register to create your account</p>
 
-        <form id="register-form">
+        <form id="register-form" novalidate>
 
             <!-- Full Name -->
             <label for="name">Full Name</label>
@@ -35,6 +35,8 @@
                 placeholder="Enter your email"
                 required
             >
+            <!-- Success / Error Message -->
+            <p id="email-message"></p>
 
             <!-- Address -->
             <label for="address">Address</label>
@@ -80,5 +82,7 @@
 
     </div>
 
+    <!-- Js File -->
+     <script src="script.js"></script>
 </body>
 </html>
