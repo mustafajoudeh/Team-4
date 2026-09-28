@@ -29,6 +29,9 @@ let users = [
 const form = document.getElementById("register-form");
 const emailInput = document.getElementById("email");
 const message = document.getElementById("email-message");
+const registerForm = document.getElementById("register-form");
+const passwordInput = document.getElementById("password");
+const confirmPasswordInput = document.getElementById("confirm-password");
 
 form.addEventListener("submit" , function(e){
     e.preventDefault();
@@ -64,11 +67,7 @@ function showMessage(text , type){
         emailInput.classList.remove("input-error");
     }
 }
-// Get form elements from HTML
-const registerForm = document.getElementById("register-form");
-const passwordInput = document.getElementById("password");
-const confirmPasswordInput = document.getElementById("confirm-password");
-const message = document.getElementById("message");
+
 
 // Listen for form submission event
 registerForm.addEventListener("submit", function(event) {
