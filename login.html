@@ -1,55 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Login</title>
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
+      <h1>Login</h1>
+      <p class="subtitle">Welcome back!</p>
 
-        <h1>Login</h1>
-        <p class="subtitle">Welcome back!</p>
+      <form id="login-form">
+        <!-- Email -->
+        <label for="login-email">Email</label>
+        <input
+          type="email"
+          id="login-email"
+          placeholder="Enter your email"
+          required
+        />
 
-        <form id="login-form">
+        <!-- Password -->
+        <label for="login-password">Password</label>
+        <input
+          type="password"
+          id="login-password"
+          placeholder="Enter your password"
+          minlength="6"
+          required
+        />
 
-            <!-- Email -->
-            <label for="login-email">Email</label>
-            <input
-                type="email"
-                id="login-email"
-                placeholder="Enter your email"
-            >
+        <!-- Success / Error Message -->
+        <p id="message"></p>
 
-            <!-- Password -->
-            <label for="login-password">Password</label>
-            <input
-                type="password"
-                id="login-password"
-                placeholder="Enter your password"
-            >
+        <!-- Login Button -->
+        <button type="submit">Login</button>
+      </form>
 
-            <!-- Success / Error Message -->
-            <p id="message"></p>
-
-            <!-- Login Button -->
-            <button type="submit">
-                Login
-            </button>
-
-        </form>
-
-        <p class="switch-page">
-            Don't have an account?
-            <a href="register.html">Register</a>
-        </p>
-
+      <p class="switch-page">
+        Don't have an account?
+        <a href="register.html">Register</a>
+      </p>
     </div>
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
